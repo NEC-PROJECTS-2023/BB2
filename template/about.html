@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Wine Quality Test</title>
+    <link rel="stylesheet" href="{{ url_for('static',filename='css/style.css') }}">
+</head>
+<body>
+<div class="heading">
+        <h1>Wine Quality Test</h1>
+    </div>
+    <section class="about-us">
+        <img src="{{url_for('static', filename='wine image.jpg')}}">
+        <div class="content">
+            <h2>About Us</h2>
+            <p>It is a wine quality prediction system.</p>
+            <p>This website helps you to predict the wine quality whether it is good or bad based on the composition values given by the user.</p>
+            <p>To check the quality, click on "Start".</p>
+            <button class="read-more-btn" onclick="window.location.href='{{ url_for('formsg') }}';">Start</button>
+        </div>
+    </section>
+</body>
+</html>

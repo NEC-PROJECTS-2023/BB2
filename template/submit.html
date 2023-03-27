@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/submission.css') }}">
+</head>
+<body>
+<h1> Prediction of your sample</h1>
+{% if result == 1 %}
+<img src="{{url_for('static', filename='good.png')}}" class="center">
+{% else %}
+<img src="{{url_for('static', filename='bad.png')}}" class="center">
+{% endif %}
+</body>
+</html>
+

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Forms</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static',filename='css/formstyle.css') }}">
+</head>
+<body>
+<div class="container">
+  <h1>Wine Quality Test</h1>
+  <p>Predict the quality of your wine sample</p>
+  <div class="contact-box">
+    <div class="contact-left">
+      <h3>Send your composition values</h3>
+      <form action='/predict' method="POST">
+        <div class="input-row">
+          <div class="input-group">
+            <label>fixed acidity</label>
+            <input type="number" name="fixed_acidity" placeholder="Enter Fixed Acidity value" max="16" min="4" step="0.01" required="required">
+          </div>
+          <div class="input-group">
+            <label>volatile acidity</label>
+            <input type="number" name="volatile_acidity" placeholder="Enter Volatile Acidity value" max="1" min="0.3" step="0.001" required="required">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>citric acid</label>
+            <input type="number" name="citric_acid" placeholder="Enter Citric Acid value" max="1" min="0" step="0.01" required="required">
+          </div>
+          <div class="input-group">
+            <label>residual sugar</label>
+            <input type="number" name="residual_sugar" placeholder="Enter Residual Sugar value" max="7" min="1" step="0.1" required="required">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>chlorides</label>
+            <input type="number" name="chlorides" placeholder="Enter Chlorides value" max="1.000" min="0.000" step="0.001" required="required">
+          </div>
+          <div class="input-group">
+            <label>free sulfur dioxide</label>
+            <input type="number" name="free_sulfur_dioxide" placeholder="Enter Free Sulfur Dioxide value" max="72" min="1" step="0.1" required="required">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>total sulfur dioxide</label>
+            <input type="number" name="total_sulfur_dioxide" placeholder="Enter Total Sulfur Dioxide value" max="289" min="6" step="0.1" required="required">
+          </div>
+          <div class="input-group">
+            <label>density</label>
+            <input type="number" name="density" placeholder="Enter Density value" max="1.00000" min="0.99000" step="0.00001" required="required">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>pH</label>
+            <input type="number" name="pH" placeholder="Enter pH value" max="4.01" min="2.7" step="0.01" required="required">
+          </div>
+          <div class="input-group">
+            <label>sulphates</label>
+            <input type="number" name="sulphates" placeholder="Enter Sulphates value" max="2" min="0.33" step="0.01" required="required">
+          </div>
+        </div>
+        <div class="input-row">
+          <div class="input-group">
+            <label>alcohol</label>
+            <input type="number" name="alcohol" placeholder="Enter Alcohol value" max="14.9" min="8.4" step="0.1" required="required">
+          </div>
+        </div>
+        <button type="submit">Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
+</body>
+</html>
